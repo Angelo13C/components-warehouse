@@ -1,0 +1,37 @@
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 7%;
+    background-color: #1E4970;
+    padding: 2.5%;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+}
+
+.menu li {
+    margin-right: 2%;
+    border: 4px solid var(--menu-border-color);
+    padding: 7px;
+    width: 10%;
+    text-align: center;
+}
+
+.menu li.selected
+{
+	background-color: var(--menu-border-color);
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}

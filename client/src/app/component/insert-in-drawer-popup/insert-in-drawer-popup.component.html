@@ -1,0 +1,24 @@
+<div class="overlay-menu show">
+	<div class="menu-content">
+		<p style="font-weight: bolder;">Insert an item in the drawer</p>
+
+		<br>
+
+        <app-item
+            class="plus-cursor"
+            *ngFor="let item of existingItems"
+            [item]="item"
+            [existingTags]="existingTags"
+            [isSelected]="selectedItem == item"
+            (onClicked)="selectItem(item)"
+        >
+        </app-item>
+
+        <br>
+
+		<div class="row">
+			<button (click)="confirmInsertion()" class="btn btn-success"><i class="bi bi-check h3"></i></button>
+			<button (click)="abort()" class="btn btn-danger"><i class="bi bi-x h3"></i></button>
+		</div>
+	</div>
+</div>

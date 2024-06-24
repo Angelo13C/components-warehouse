@@ -1,0 +1,44 @@
+.overlay-menu {
+	position: fixed;
+	padding: 0;
+	margin: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-content {
+	position: relative;
+	width: 30%;
+	min-width: 500px;
+	height: 40%;
+	background: white;
+	z-index: 1000;
+	padding: 20px;
+	border-radius: 10px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.row {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.plus-cursor
+{
+	cursor: url('https://icons.getbootstrap.com/assets/icons/plus-lg.svg'), auto;
+}

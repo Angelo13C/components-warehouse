@@ -1,0 +1,37 @@
+<p class="description-text">
+	<br />
+    <b>Drawers are container of items. Add an item to an empty drawer by left clicking on it, remove an item from a non-empty drawer 
+    by right clicking on it.</b>
+</p>
+
+<div *ngIf="isPopupVisible">
+	<app-insert-in-drawer-popup
+        [existingTags]="existingTags"
+        [existingItems]="existingItems"
+		(abortCreation)="hidePopup()"
+		(finishCreation)="finishInsertion($event)"
+	></app-insert-in-drawer-popup>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <td></td>
+            <td class="index">1</td>
+            <td class="index">2</td>
+            <td class="index">3</td>
+            <td class="index">4</td>
+            <td class="index">5</td>
+            <td class="index">6</td>
+            <td class="index">7</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of rows; let i = index">
+            <td class="index">{{ i + 1 }}</td>
+            <td *ngFor="let drawer of row">
+                <app-drawer [drawer]="drawer" [existingItems]="existingItems" [existingTags]="existingTags" (onClicked)="clickDrawer(drawer)"></app-drawer>
+            </td>
+        </tr>
+    </tbody>
+</table>

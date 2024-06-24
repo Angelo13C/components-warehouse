@@ -1,0 +1,23 @@
+table {
+    border-collapse: separate;
+    border-spacing: 40px;
+    margin-top: -30px;
+}
+
+td
+{
+    text-align: center;
+    white-space: pre;
+}
+
+td.bordered-text {
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.index
+{
+    color: white;
+    font-weight: bold;
+}

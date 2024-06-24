@@ -1,0 +1,30 @@
+<p class="description-text">
+	<br />
+	<b>Click the <i class="bi bi-plus-circle"></i> button to create a new tag, and click on a tag to delete it. Examples of tags include </b>
+	"<i>Resistor</i>", "<i>1K</i>", "<i>2.2</i>", "<i>10μ</i>", "<i>Capacitor</i>".<br />
+	<b>For instance, an item with the tags </b><i>Resistor</i><b> and </b><i> 2.2 </i><b>represents a resistor with a resistance of 2.2Ω.</b>
+</p>
+
+<p class="error-text">
+	<b>{{ errorMessage }}</b>
+</p>
+
+<div *ngIf="isPopupVisible">
+	<app-new-item-tag-popup
+		(abortCreation)="hidePopup()"
+		(finishCreation)="createTag($event)"
+	></app-new-item-tag-popup>
+</div>
+
+<div>
+	<app-new-button class="container mt-5" (createNewTag)="showPopup()">
+	</app-new-button>
+
+	<app-item-tag
+		class="delete-cursor"
+		*ngFor="let tag of tags"
+		[tag]="tag"
+		(onClicked)="removeTag(tag)"
+	>
+	</app-item-tag>
+</div>

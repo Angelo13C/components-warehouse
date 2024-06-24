@@ -1,0 +1,31 @@
+<p class="description-text">
+	<br/>
+    <b>Items are just a collection of 1 or more tags that can be inserted in drawers. Click the <i class="bi bi-plus-circle"></i> 
+	button to create a new item, and click on an item to delete it. (all drawers containing an item that you just deleted will become empty)</b>
+</p>
+
+<p class="error-text">
+	<b>{{ errorMessage }}</b>
+</p>
+
+<div *ngIf="isPopupVisible">
+	<app-new-item-popup
+        [existingTags]="tags"
+		(abortCreation)="hidePopup()"
+		(finishCreation)="createItem($event)"
+	></app-new-item-popup>
+</div>
+
+<div>
+	<app-new-button class="container mt-5" (createNewTag)="showPopup()">
+	</app-new-button>
+
+	<app-item
+		class="delete-cursor"
+		*ngFor="let item of items"
+		[item]="item"
+		[existingTags]="tags"
+		(onClicked)="removeItem(item)"
+	>
+	</app-item>
+</div>

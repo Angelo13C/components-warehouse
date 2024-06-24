@@ -1,0 +1,18 @@
+@import "./variables.scss";
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #2A2A2A;
+}
+
+.description-text
+{
+    color: white;
+}
+.error-text
+{
+    color: red;
+}

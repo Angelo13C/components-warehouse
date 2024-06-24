@@ -1,0 +1,19 @@
+<div class="overlay-menu show">
+	<div class="menu-content">
+		<p style="font-weight: bolder;">Create a new tag</p>
+		
+		<input
+			type="text"
+			autocomplete="off"
+			placeholder="Label"
+			(keyup)="onKey($event)"
+		/>
+
+		<br>
+
+		<div class="row">
+			<button (click)="confirmNewTag()" class="btn btn-success"><i class="bi bi-check h3"></i></button>
+			<button (click)="abort()" class="btn btn-danger"><i class="bi bi-x h3"></i></button>
+		</div>
+	</div>
+</div>

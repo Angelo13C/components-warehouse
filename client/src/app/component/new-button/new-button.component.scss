@@ -1,0 +1,13 @@
+.rounded-background {
+    color: var(--drawer-border-color);
+    
+    margin: 6px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+    
+    display: inline-block;
+}
